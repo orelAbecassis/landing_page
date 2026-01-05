@@ -126,7 +126,6 @@ export const services = [
         id: 'gestion-projet',
         title: 'Gestion de Projet',
         subtitle: 'ORGANISATION',
-        number: '05',
         quote: 'La réussite de vos projets, sans stress',
         description: 'Pilotage complet de vos projets digitaux pour garantir respect des délais, budget et qualité.',
         fullDescription: 'En tant que Chef de Projet, je prends en main le pilotage de vos projets web et mobiles. De la conception à la mise en ligne, je coordonne les équipes, gère le planning et m\'assure que le produit final correspond parfaitement à vos attentes.',
