@@ -22,10 +22,11 @@ import orelImage from '../assets/orel_about.png'
 
           <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
             <p>
-              Je suis Orel Abecassis, cheffe de projet et développeuse web, passionnée par l’innovation digitale et les nouvelles technologies. Titulaire d’un Bac+5 en informatique, spécialisé en développement web et en gestion de projet, je poursuis actuellement un double master en entrepreneuriat afin de renforcer mes compétences en management, en stratégie et en leadership.
+              Cheffe de projet et développeuse web, passionnée par l’innovation digitale et les nouvelles technologies. Titulaire d’un Bac+5 en informatique, spécialisé en développement web et en gestion de projet, je poursuis actuellement un double master en entrepreneuriat afin de renforcer mes compétences en management, en stratégie et en leadership.
             </p>
             <p>
-              Animée par le DevOps, la gestion de projet et le développement web, j’ai choisi de me lancer en freelance pour mettre mon expertise au service de projets innovants. Mon quotidien : créer, automatiser, optimiser et piloter des solutions digitales modernes.
+              Animée par le DevOps, la gestion de projet et le développement web, j’ai choisi de me lancer en freelance pour mettre mon expertise au service de projets innovants. 
+              <br>Mon quotidien : créer, automatiser, optimiser et piloter des solutions digitales modernes.
             </p>
           </div>
         </div>

@@ -17,13 +17,18 @@ const router = createRouter({
         }
     ],
     scrollBehavior(to, from, savedPosition) {
-        if (to.hash) {
-            return {
-                el: to.hash,
-                behavior: 'smooth',
-            }
-        }
-        return { top: 0 }
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                if (to.hash) {
+                    resolve({
+                        el: to.hash,
+                        behavior: 'smooth',
+                    })
+                } else {
+                    resolve({ top: 0 })
+                }
+            }, 500)
+        })
     }
 })
 

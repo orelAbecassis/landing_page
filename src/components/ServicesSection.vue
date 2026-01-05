@@ -23,33 +23,26 @@ const goToService = (id) => {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex flex-wrap justify-center gap-6">
         <div 
           v-for="(service, index) in services" 
           :key="service.id"
           @click="goToService(service.id)"
           v-motion
           :initial="{ opacity: 0, y: 50 }"
-          :visible="{ opacity: 1, y: 0, transition: { delay: index * 200 } }"
-          class="group p-8 rounded-2xl bg-dark-800 border border-white/5 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] cursor-pointer relative overflow-hidden"
+          :visible="{ opacity: 1, y: 0, transition: { delay: index * 100 } }"
+          class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] group p-8 rounded-2xl bg-dark-800 border border-white/5 hover:border-primary-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] cursor-pointer relative overflow-hidden flex flex-col items-center text-center justify-center"
         >
           <!-- Hover Gradient Background -->
           <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-          <div class="relative z-10">
-            <div class="w-14 h-14 rounded-xl bg-dark-700 flex items-center justify-center mb-6 group-hover:bg-primary-500/20 transition-colors">
-              <component :is="service.icon" class="w-7 h-7 text-primary-500 group-hover:text-primary-400" />
+          <div class="relative z-10 flex flex-col items-center">
+            <div class="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+              <component :is="service.icon" class="w-12 h-12 text-primary-500" />
             </div>
             
-            <h3 class="text-xl font-bold mb-4 text-white group-hover:text-primary-400 transition-colors">{{ service.title }}</h3>
-            <p class="text-gray-400 mb-6 leading-relaxed">{{ service.description }}</p>
-            
-            <ul class="space-y-2">
-              <li v-for="feature in service.features" :key="feature" class="flex items-center gap-2 text-sm text-gray-500">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary-500"></span>
-                {{ feature }}
-              </li>
-            </ul>
+            <h3 class="text-xl font-bold mb-2 text-white group-hover:text-primary-400 transition-colors">{{ service.title }}</h3>
+            <span class="text-xs font-bold tracking-widest uppercase text-secondary-400">{{ service.subtitle }}</span>
           </div>
         </div>
       </div>
