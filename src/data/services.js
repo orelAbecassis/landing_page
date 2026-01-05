@@ -96,7 +96,6 @@ export const services = [
         id: 'reseaux-sociaux',
         title: 'Réseaux Sociaux',
         subtitle: 'VISIBILITÉ',
-        number: '04',
         quote: 'Transformez votre audience en clients',
         description: 'Gestion stratégique de votre présence en ligne pour accroître votre visibilité et votre engagement.',
         fullDescription: 'Ne laissez pas vos réseaux sociaux au hasard. En tant que Community Manager, je vous aide à construire une communauté engagée et fidèle autour de votre marque.',
