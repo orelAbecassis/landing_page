@@ -1,4 +1,4 @@
-import { Monitor, Smartphone, Share2, Layout, ClipboardList } from 'lucide-vue-next'
+import { Monitor, Smartphone, Share2, Layout, ClipboardList, Sparkles, Cpu } from 'lucide-vue-next'
 
 export const services = [
     {
@@ -27,14 +27,21 @@ export const services = [
             title: 'Solution Sur Mesure',
             description: 'Vous avez un besoin spécifique qui ne rentre dans aucune case ? C\'est là que je m\'amuse le plus.',
             details: 'Il permet de présenter clairement votre activité, vos services et votre identité, tout en offrant à vos visiteurs une expérience fluide et accessible à tout moment. Un site bien conçu inspire confiance et valorise votre image professionnelle.',
+            icon: Sparkles
         }
     },
     {
         id: 'app-web',
         title: 'App Web',
         subtitle: 'SUR MESURE',
+        quote: 'Une solution de pilotage adaptée à votre organisation',
         description: 'Développement d\'applications web complexes et sur-mesure pour répondre à vos besoins métiers spécifiques.',
         fullDescription: 'Transformez vos idées en outils puissants. Je développe des applications web robustes, évolutives et sécurisées, parfaitement adaptées à vos processus métiers.',
+        hero: {
+            subtitle: 'Applications Web & SAAS',
+            title: 'Transformez vos idées en outils puissants.',
+            description: 'Des solutions logicielles sur mesure, accessibles partout, pour optimiser vos processus et booster votre productivité.'
+        },
         icon: Layout,
         features: ['Fonctionnalités avancées', 'Interface intuitive'],
         detailedFeatures: [
@@ -43,7 +50,13 @@ export const services = [
             'Développement Full Stack',
             'Tests et déploiement',
             'Maintenance évolutive'
-        ]
+        ],
+        surMesure: {
+            title: 'Pourquoi une App Web ?',
+            description: 'Plus qu\'un site, un véritable logiciel accessible via navigateur.',
+            details: 'Gestion de clients, tableaux de bord, automatisation de processus... Une application web est conçue pour être l\'épine dorsale de votre activité digitale, disponible 24/7 sur tous les supports.',
+            icon: Cpu
+        }
     },
     {
         id: 'cartes-digitales',

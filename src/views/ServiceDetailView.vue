@@ -123,7 +123,7 @@ const goBack = () => {
             <div class="flex justify-center">
               <div class="w-64 h-64 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-3xl flex items-center justify-center relative rotate-3 hover:rotate-6 transition-transform duration-500 border border-white/5 shadow-2xl shadow-primary-500/10">
                 <div class="absolute inset-0 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10"></div>
-                <Sparkles class="w-24 h-24 text-white relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
+                <component :is="service.surMesure.icon" class="w-24 h-24 text-white relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]" />
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ const goBack = () => {
             href="#contact" 
             class="inline-block px-10 py-5 bg-primary-600 hover:bg-primary-500 text-white font-bold text-lg rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-primary-600/20"
           >
-            Démarrer mon projet
+            Demander un devis
           </a>
         </div>
       </div>
