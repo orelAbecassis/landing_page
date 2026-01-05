@@ -1,20 +1,18 @@
 <script setup>
-import orelImage from '../assets/orel_graphic.png'
+import orelImage from '../assets/orel_about.png'
 </script>
 
 <template>
   <section id="about" class="py-20 bg-dark-900 relative overflow-hidden">
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-        
-        <!-- Text Content (Left) -->
-        <div 
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-12">
+        <div
           class="flex-1 space-y-8"
           v-motion
           :initial="{ opacity: 0, x: -50 }"
           :visible="{ opacity: 1, x: 0, transition: { duration: 800 } }"
         >
-          <span class="text-primary-400 text-xs font-bold tracking-widest uppercase">
+          <span class="text-primary-400 text-xl font-bold tracking-widest uppercase">
             À propos
           </span>
           
@@ -24,13 +22,10 @@ import orelImage from '../assets/orel_graphic.png'
 
           <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
             <p>
-              Hello ! Je suis <strong class="text-white">Orel</strong>. Ce qui me passionne avant tout, c'est de <strong class="text-white">donner vie aux idées</strong>.
+              Je suis Orel Abecassis, cheffe de projet et développeuse web, passionnée par l’innovation digitale et les nouvelles technologies. Titulaire d’un Bac+5 en informatique, spécialisé en développement web et en gestion de projet, je poursuis actuellement un double master en entrepreneuriat afin de renforcer mes compétences en management, en stratégie et en leadership.
             </p>
             <p>
-              Que ce soit pour lancer un nouveau projet ou trouver des solutions créatives aux problèmes qu'on me soumet, je m'investis pleinement pour concrétiser votre vision et transformer vos concepts en réalité.
-            </p>
-            <p>
-              En tant que développeur full-stack, j'accompagne également les entreprises et les particuliers dans l'optimisation de leur présence digitale. Je propose du conseil et de la conception d'applications sur mesure pour structurer et fluidifier votre façon de travailler.
+              Animée par le DevOps, la gestion de projet et le développement web, j’ai choisi de me lancer en freelance pour mettre mon expertise au service de projets innovants. Mon quotidien : créer, automatiser, optimiser et piloter des solutions digitales modernes.
             </p>
           </div>
         </div>
@@ -46,7 +41,6 @@ import orelImage from '../assets/orel_graphic.png'
              <img :src="orelImage" alt="Orel Abecassis" class="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-700 drop-shadow-2xl" />
           </div>
         </div>
-
       </div>
     </div>
   </section>

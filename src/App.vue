@@ -9,15 +9,9 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-dark-900 text-white selection:bg-primary-500 selection:text-white">
+  <div class="min-h-screen bg-dark-900 text-gray-100 selection:bg-primary-500 selection:text-white font-sans">
     <NavBar />
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <PortfolioSection />
-      <ContactSection />
-    </main>
+    <router-view />
     <Footer />
   </div>
 </template>

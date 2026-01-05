@@ -68,9 +68,8 @@ onUnmounted(() => {
         </div>
 
         <!-- Massive Name -->
-        <h1 class="text-7xl md:text-9xl font-black tracking-tighter text-white drop-shadow-2xl">
-          Orel
-          <span class="block">Abecassis</span>
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white drop-shadow-2xl">
+          Orel Abecassis
         </h1>
 
         <!-- Quote -->
@@ -80,6 +79,7 @@ onUnmounted(() => {
             La créativité, c’est l’intelligence qui s’amuse.
             <span class="text-primary-500 text-4xl absolute -bottom-4 -right-8">"</span>
           </p>
+          <p class="text-base md:text-lg text-gray-500 mt-4"> Albert Einstein</p>
         </div>
 
         <!-- CTA Buttons -->

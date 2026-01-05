@@ -25,19 +25,19 @@ const toggleMenu = () => {
   >
     <div class="container mx-auto px-6 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="h-28 w-auto transition-transform group-hover:scale-105">
+      <router-link to="/" class="flex items-center gap-3 group">
+        <div class="h-48 w-auto transition-transform group-hover:scale-105">
           <img src="/logo.png" alt="AbeWeb" class="h-full w-auto object-contain" />
         </div>
-      </a>
+      </router-link>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center gap-8">
         <a 
           v-for="link in navLinks" 
           :key="link.name" 
-          :href="link.href"
-          class="text-sm font-medium text-gray-300 hover:text-primary-400 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-400 after:transition-all hover:after:w-full"
+          :href="link.href.startsWith('#') ? '/' + link.href : link.href"
+          class="text-base font-medium text-gray-300 hover:text-primary-400 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary-400 after:transition-all hover:after:w-full"
         >
           {{ link.name }}
         </a>
@@ -69,9 +69,9 @@ const toggleMenu = () => {
         <a 
           v-for="link in navLinks" 
           :key="link.name" 
-          :href="link.href"
+          :href="link.href.startsWith('#') ? '/' + link.href : link.href"
           @click="isMenuOpen = false"
-          class="text-lg font-medium text-gray-300 hover:text-primary-400 transition-colors"
+          class="text-lg font-medium text-gray-300 hover:text-white transition-colors"
         >
           {{ link.name }}
         </a>
