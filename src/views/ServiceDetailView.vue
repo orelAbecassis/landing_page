@@ -37,10 +37,10 @@ const goBack = () => {
              <span class="text-sm font-bold tracking-wide text-primary-400">{{ service.hero.subtitle }}</span>
           </div>
           <h1 class="text-4xl md:text-6xl font-bold mb-8 text-white leading-tight">
-            {{ service.hero.title.split(' ').slice(0, 4).join(' ') }}
+            {{ service.hero.title.split(' ').slice(0, service.hero.colorStartIndex || 4).join(' ') }}
             <br />
             <span class="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
-              {{ service.hero.title.split(' ').slice(4).join(' ') }}
+              {{ service.hero.title.split(' ').slice(service.hero.colorStartIndex || 4).join(' ') }}
             </span>
           </h1>
           <p class="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">

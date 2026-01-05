@@ -1,4 +1,4 @@
-import { Monitor, Smartphone, Share2, Layout, ClipboardList, Sparkles, Cpu } from 'lucide-vue-next'
+import { Monitor, Smartphone, Share2, Layout, ClipboardList, Sparkles, Cpu, QrCode, MessageCircle, Target } from 'lucide-vue-next'
 
 export const services = [
     {
@@ -11,7 +11,8 @@ export const services = [
         hero: {
             subtitle: 'Développement Web & Solutions Digitales',
             title: 'Donnez un nouvel élan à votre activité.',
-            description: 'De la simple présence en ligne aux applications web complexes. Je conçois des outils numériques performants, esthétiques et taillés pour votre croissance.'
+            description: 'De la simple présence en ligne aux applications web complexes. Je conçois des outils numériques performants, esthétiques et taillés pour votre croissance.',
+            colorStartIndex: 4
         },
         icon: Monitor,
         features: ['Design sur-mesure', 'Responsive & Rapide'],
@@ -40,7 +41,8 @@ export const services = [
         hero: {
             subtitle: 'Applications Web & SAAS',
             title: 'Transformez vos idées en outils puissants.',
-            description: 'Des solutions logicielles sur mesure, accessibles partout, pour optimiser vos processus et booster votre productivité.'
+            description: 'Des solutions logicielles sur mesure, accessibles partout, pour optimiser vos processus et booster votre productivité.',
+            colorStartIndex: 3
         },
         icon: Layout,
         features: ['Fonctionnalités avancées', 'Interface intuitive'],
@@ -62,8 +64,15 @@ export const services = [
         id: 'cartes-digitales',
         title: 'Carte Digitale',
         subtitle: 'INNOVATION',
-        description: 'Création de cartes de visite et d’invitations digitales pour une communication moderne et élégante.',
+        quote: 'Bien plus qu\'une simple carte',
+        description: 'Création de cartes de visite ou d’invitations digitales pour une communication moderne et élégante.',
         fullDescription: 'Offrez une expérience unique avec des cartes digitales pour vos événements : mariages, anniversaires, invitations professionnelles ou privées. Interactives et personnalisées, elles permettent de partager toutes les informations essentielles (date, lieu, programme, contact) de manière simple et intuitive.',
+        hero: {
+            subtitle: 'Cartes de Visite & Invitations',
+            title: 'Une carte unique pour tous vos moments.',
+            description: 'Professionnels ou particuliers : carte de visite, invitation de mariage, faire-part... Une solution digitale élégante, écologique et instantanée.',
+            colorStartIndex: 2
+        },
         icon: Smartphone,
         features: [
             'Cartes interactives',
@@ -75,14 +84,28 @@ export const services = [
             'Informations modifiables à tout moment',
             'Compatible mobile, tablette et ordinateur',
             'Solution écologique et économique'
-        ]
+        ],
+        surMesure: {
+            title: 'Une infinité de possibilités',
+            description: 'Adaptez votre communication à chaque occasion.',
+            details: 'Que ce soit pour networker efficacement ou pour inviter vos proches à un événement, la carte digitale s\'adapte à vos besoins. Partage illimité, design sur-mesure et effet "wow" garanti.',
+            icon: QrCode
+        }
     },
     {
         id: 'reseaux-sociaux',
         title: 'Réseaux Sociaux',
         subtitle: 'VISIBILITÉ',
+        number: '04',
+        quote: 'Transformez votre audience en clients',
         description: 'Gestion stratégique de votre présence en ligne pour accroître votre visibilité et votre engagement.',
         fullDescription: 'Ne laissez pas vos réseaux sociaux au hasard. En tant que Community Manager, je vous aide à construire une communauté engagée et fidèle autour de votre marque.',
+        hero: {
+            subtitle: 'Social Media Management',
+            title: 'Faites rayonner votre marque sur le web.',
+            description: 'Une stratégie social media performante pour accroître votre visibilité, engager votre communauté et booster votre business.',
+            colorStartIndex: 4
+        },
         icon: Share2,
         features: ['Stratégie de contenu', 'Community Management', 'Analyse de performance'],
         detailedFeatures: [
@@ -92,14 +115,28 @@ export const services = [
             'Planification et publication',
             'Modération et réponse aux commentaires',
             'Rapport mensuel de performances'
-        ]
+        ],
+        surMesure: {
+            title: 'Plus que des likes',
+            description: 'Une véritable stratégie de communication.',
+            details: 'Création de contenu, planning éditorial, modération, analyse... Je gère votre présence en ligne de A à Z pour vous permettre de vous concentrer sur votre cœur de métier.',
+            icon: MessageCircle
+        }
     },
     {
         id: 'gestion-projet',
         title: 'Gestion de Projet',
         subtitle: 'ORGANISATION',
+        number: '05',
+        quote: 'La réussite de vos projets, sans stress',
         description: 'Pilotage complet de vos projets digitaux pour garantir respect des délais, budget et qualité.',
         fullDescription: 'En tant que Chef de Projet, je prends en main le pilotage de vos projets web et mobiles. De la conception à la mise en ligne, je coordonne les équipes, gère le planning et m\'assure que le produit final correspond parfaitement à vos attentes.',
+        hero: {
+            subtitle: 'Pilotage & Coordination',
+            title: 'Transformez vos ambitions en succès.',
+            description: 'Un pilotage rigoureux de vos projets digitaux. Je coordonne les équipes et garantis le respect des délais et de la qualité.',
+            colorStartIndex: 3
+        },
         icon: ClipboardList,
         features: ['Planification', 'Coordination', 'Suivi qualité'],
         detailedFeatures: [
@@ -108,6 +145,12 @@ export const services = [
             'Gestion des risques',
             'Suivi budgétaire',
             'Recette et tests'
-        ]
+        ],
+        surMesure: {
+            title: 'Un chef d\'orchestre dédié',
+            description: 'De la conception à la mise en ligne.',
+            details: 'Cahier des charges, méthodologie Agile, suivi budgétaire... Je suis le garant de la bonne exécution de votre projet, en faisant le lien entre vos besoins et la technique.',
+            icon: Target
+        }
     }
 ]
