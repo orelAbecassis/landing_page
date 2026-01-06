@@ -51,12 +51,12 @@ export const services = [
             'Architecture sur-mesure',
             'Développement Full Stack',
             'Tests et déploiement',
-            'Maintenance évolutive'
+            'Maintenance (1 mois)'
         ],
         surMesure: {
             title: 'Pourquoi une App Web ?',
             description: 'Plus qu\'un site, un véritable logiciel accessible via navigateur.',
-            details: 'Gestion de clients, tableaux de bord, automatisation de processus... Une application web est conçue pour être l\'épine dorsale de votre activité digitale, disponible 24/7 sur tous les supports.',
+            details: 'Gestion de clients, tableaux de bord, automatisation de processus... Une application web devient le cœur de votre activité digitale, disponible 24/7 sur tous les supports.',
             icon: Cpu
         }
     },
@@ -70,7 +70,7 @@ export const services = [
         hero: {
             subtitle: 'Cartes de Visite & Invitations',
             title: 'Une carte unique pour tous vos moments.',
-            description: 'Professionnels ou particuliers : carte de visite, invitation de mariage, faire-part... Une solution digitale élégante, écologique et instantanée.',
+            description: 'Professionnels ou particuliers : carte de visite, invitation de mariage, faire-part... Une solution digitale élégante et à votre imagination.',
             colorStartIndex: 2
         },
         icon: Smartphone,
@@ -83,7 +83,6 @@ export const services = [
             'Accès via lien ou QR Code',
             'Informations modifiables à tout moment',
             'Compatible mobile, tablette et ordinateur',
-            'Solution écologique et économique'
         ],
         surMesure: {
             title: 'Une infinité de possibilités',
@@ -112,8 +111,6 @@ export const services = [
             'Définition de la stratégie éditoriale',
             'Création de visuels et rédaction de posts',
             'Planification et publication',
-            'Modération et réponse aux commentaires',
-            'Rapport mensuel de performances'
         ],
         surMesure: {
             title: 'Plus que des likes',
@@ -132,7 +129,7 @@ export const services = [
         hero: {
             subtitle: 'Pilotage & Coordination',
             title: 'Transformez vos ambitions en succès.',
-            description: 'Un pilotage rigoureux de vos projets digitaux. Je coordonne les équipes et garantis le respect des délais et de la qualité.',
+            description: 'Un pilotage rigoureux de vos projets digitaux. Je coordonne les équipes et garantie le respect des délais et de la qualité.',
             colorStartIndex: 3
         },
         icon: ClipboardList,

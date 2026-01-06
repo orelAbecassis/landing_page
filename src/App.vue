@@ -13,12 +13,12 @@ import Footer from './components/Footer.vue'
     <NavBar />
     <router-view v-slot="{ Component }">
       <transition
-        enter-active-class="transition-all duration-700 ease-out"
-        enter-from-class="opacity-0 blur-md scale-95"
-        enter-to-class="opacity-100 blur-0 scale-100"
+        enter-active-class="transition-all duration-500 ease-out"
+        enter-from-class="opacity-0 scale-90"
+        enter-to-class="opacity-100 scale-100"
         leave-active-class="transition-all duration-500 ease-in"
-        leave-from-class="opacity-100 blur-0 scale-100"
-        leave-to-class="opacity-0 blur-md scale-105"
+        leave-from-class="opacity-100 scale-100"
+        leave-to-class="opacity-0 scale-105"
         mode="out-in"
       >
         <component :is="Component" />

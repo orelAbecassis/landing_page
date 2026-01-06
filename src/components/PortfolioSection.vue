@@ -3,22 +3,25 @@ import { ExternalLink } from 'lucide-vue-next'
 
 const projects = [
   {
-    title: 'E-Commerce Luxe',
-    category: 'Site Vitrine & Boutique',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    tags: ['Vue.js', 'Tailwind', 'Stripe']
+    title: 'Mel Marciano',
+    category: 'Site Vitrine',
+    image: '/mel-marciano.png',
+    tags: ['Odoo'],
+    link: 'https://mel-marciano.odoo.com/'
   },
   {
     title: 'Event App',
     category: 'Carte Digitale',
     image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'Node.js', 'Socket.io']
+    tags: ['React', 'Node.js', 'Socket.io'],
+    link: '#'
   },
   {
     title: 'Dashboard Analytics',
     category: 'Application Web',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    tags: ['Vue 3', 'Chart.js', 'Firebase']
+    tags: ['Vue 3', 'Chart.js', 'Firebase'],
+    link: '#'
   }
 ]
 </script>
@@ -31,20 +34,23 @@ const projects = [
           <h2 class="text-3xl md:text-4xl font-bold mb-4">Mon Portfolio</h2>
           <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>
         </div>
-        <a href="#" class="text-primary-400 hover:text-primary-300 font-medium flex items-center gap-2 transition-colors">
+        <a href="https://github.com/orelAbecassis" target="_blank" rel="noopener noreferrer" class="text-primary-400 hover:text-primary-300 font-medium flex items-center gap-2 transition-colors">
           Voir tous les projets
           <ExternalLink class="w-4 h-4" />
         </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div 
+        <a 
           v-for="(project, index) in projects" 
           :key="index"
+          :href="project.link"
+          target="_blank"
+          rel="noopener noreferrer"
           v-motion
           :initial="{ opacity: 0, scale: 0.9 }"
           :visible="{ opacity: 1, scale: 1, transition: { delay: index * 150 } }"
-          class="group relative rounded-xl overflow-hidden cursor-pointer"
+          class="group relative rounded-xl overflow-hidden cursor-pointer block"
         >
           <!-- Image -->
           <div class="aspect-video w-full overflow-hidden">
@@ -70,11 +76,11 @@ const projects = [
               </span>
             </div>
             
-            <button class="mt-6 w-full py-3 bg-primary-600 text-white font-bold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150 hover:bg-primary-500 shadow-lg shadow-primary-500/20">
+            <div class="mt-6 w-full py-3 bg-primary-600 text-white font-bold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150 hover:bg-primary-500 shadow-lg shadow-primary-500/20 text-center">
               Voir le projet
-            </button>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

@@ -31,7 +31,7 @@ const goBack = () => {
       <!-- RICH LAYOUT (For Site Vitrine etc.) -->
       <div v-if="service.hero">
         <!-- Hero Section -->
-        <div class="text-center mb-24 max-w-4xl mx-auto" v-motion :initial="{ opacity: 0, y: 20 }" :enter="{ opacity: 1, y: 0 }">
+        <div class="text-center mb-24 max-w-4xl mx-auto" v-motion :initial="{ opacity: 0, scale: 0.9 }" :enter="{ opacity: 1, scale: 1 }">
           <div class="inline-flex items-center justify-center px-4 py-2 bg-dark-800 rounded-full mb-8 border border-white/10 shadow-lg">
              <Sparkles class="w-4 h-4 text-primary-500 mr-2" />
              <span class="text-sm font-bold tracking-wide text-primary-400">{{ service.hero.subtitle }}</span>
@@ -53,8 +53,8 @@ const goBack = () => {
           <div 
             class="bg-dark-800 rounded-3xl p-8 md:p-12 border border-white/5 relative overflow-hidden group hover:border-primary-500/30 transition-colors"
             v-motion
-            :initial="{ opacity: 0, y: 50 }"
-            :visible="{ opacity: 1, y: 0, transition: { delay: 200 } }"
+            :initial="{ opacity: 0, scale: 0.95 }"
+            :visible="{ opacity: 1, scale: 1, transition: { delay: 200 } }"
           >
             <!-- Background Icon -->
             <div class="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
@@ -130,7 +130,7 @@ const goBack = () => {
         </div>
 
         <!-- CTA Section -->
-        <div class="text-center py-12" v-motion :initial="{ opacity: 0, y: 30 }" :enter="{ opacity: 1, y: 0, transition: { delay: 600 } }">
+        <div class="text-center py-12" v-motion :initial="{ opacity: 0, scale: 0.9 }" :enter="{ opacity: 1, scale: 1, transition: { delay: 600 } }">
           <h3 class="text-3xl md:text-4xl font-bold text-white mb-8">Prêt à aller plus loin ?</h3>
           <a 
             href="#contact" 
@@ -144,7 +144,7 @@ const goBack = () => {
       <!-- STANDARD LAYOUT (For other services) -->
       <div v-else>
         <!-- Header -->
-        <div class="text-center mb-16" v-motion :initial="{ opacity: 0, y: 20 }" :enter="{ opacity: 1, y: 0 }">
+        <div class="text-center mb-16" v-motion :initial="{ opacity: 0, scale: 0.9 }" :enter="{ opacity: 1, scale: 1 }">
           <div class="w-20 h-20 mx-auto bg-dark-800 rounded-2xl flex items-center justify-center mb-6 border border-white/10 shadow-[0_0_30px_rgba(139,92,246,0.2)] animate-float">
             <component :is="service.icon" class="w-10 h-10 text-primary-500" />
           </div>
@@ -183,7 +183,7 @@ const goBack = () => {
         </div>
 
         <!-- CTA -->
-        <div class="text-center" v-motion :initial="{ opacity: 0, y: 20 }" :enter="{ opacity: 1, y: 0, transition: { delay: 600 } }">
+        <div class="text-center" v-motion :initial="{ opacity: 0, scale: 0.9 }" :enter="{ opacity: 1, scale: 1, transition: { delay: 600 } }">
           <a 
             href="#contact" 
             class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold transition-all hover:scale-105 shadow-lg shadow-primary-600/20"
