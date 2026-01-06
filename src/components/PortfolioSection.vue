@@ -6,21 +6,21 @@ const projects = [
     title: 'Mel Marciano',
     category: 'Site Vitrine',
     image: '/mel-marciano.png',
-    tags: ['Odoo'],
+    tags: ['Odoo', 'Web', 'Design'],
     link: 'https://mel-marciano.odoo.com/'
   },
   {
-    title: 'Event App',
-    category: 'Carte Digitale',
-    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    tags: ['React', 'Node.js', 'Socket.io'],
-    link: '#'
+    title: 'Makhome des étudiants',
+    category: 'Réseaux Sociaux',
+    image: '/makhome.jpg',
+    tags: ['Instagram', 'Community Management', 'Stratégie'],
+    link: 'https://www.instagram.com/makhomedesetudiants/'
   },
   {
-    title: 'Dashboard Analytics',
-    category: 'Application Web',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    tags: ['Vue 3', 'Chart.js', 'Firebase'],
+    title: 'Société Générale',
+    category: 'Gestion de Projet',
+    image: '/sg-notion.png',
+    tags: ['Notion', 'Agile', 'Coordination'],
     link: '#'
   }
 ]
@@ -77,7 +77,7 @@ const projects = [
             </div>
             
             <div class="mt-6 w-full py-3 bg-primary-600 text-white font-bold rounded-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150 hover:bg-primary-500 shadow-lg shadow-primary-500/20 text-center">
-              Voir le projet
+              En voir plus 
             </div>
           </div>
         </a>
