@@ -46,7 +46,7 @@ const handleSubmit = async () => {
               </div>
               <div>
                 <h3 class="text-white font-bold mb-1">Email</h3>
-                <a href="mailto:contact@orelabecassis.com" class="text-gray-400 hover:text-primary-400 transition-colors">contact@orelabecassis.com</a>
+                <a href="mailto:orel.abecassis.pro@gmail.com" class="text-gray-400 hover:text-primary-400 transition-colors">orel.abecassis.pro@gmail.com</a>
               </div>
             </div>
             
@@ -56,7 +56,7 @@ const handleSubmit = async () => {
               </div>
               <div>
                 <h3 class="text-white font-bold mb-1">Localisation</h3>
-                <p class="text-gray-400">Paris, France & Remote</p>
+                <p class="text-gray-400">Créteil, France</p>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const handleSubmit = async () => {
                 type="text" 
                 required
                 class="w-full px-4 py-3 rounded-lg bg-dark-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder:text-gray-600"
-                placeholder="John Doe"
+                placeholder="Orel Abecassis"
               />
             </div>
 
@@ -88,7 +88,7 @@ const handleSubmit = async () => {
                 type="email" 
                 required
                 class="w-full px-4 py-3 rounded-lg bg-dark-800 border border-white/10 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none transition-all placeholder:text-gray-600"
-                placeholder="john@example.com"
+                placeholder="orel@example.com"
               />
             </div>
 
