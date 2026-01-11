@@ -12,11 +12,27 @@ const isSubmitting = ref(false)
 
 const handleSubmit = async () => {
   isSubmitting.value = true
-  // Simulate API call
-  await new Promise(resolve => setTimeout(resolve, 2000))
-  isSubmitting.value = false
-  alert('Message envoyé avec succès !')
-  form.value = { name: '', email: '', message: '' }
+  try {
+    const response = await fetch('https://n8n.abeweb.fr/webhook/638a927a-8eca-47bb-be42-c5d4eeffa72c', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form.value)
+    })
+
+    if (response.ok) {
+      alert('Message envoyé avec succès !')
+      form.value = { name: '', email: '', message: '' }
+    } else {
+      throw new Error('Erreur lors de l\'envoi')
+    }
+  } catch (error) {
+    console.error('Error sending message:', error)
+    alert('Une erreur est survenue. Veuillez réessayer.')
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
