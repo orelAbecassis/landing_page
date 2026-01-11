@@ -26,7 +26,7 @@ const toggleMenu = () => {
     <div class="container mx-auto px-6 flex items-center justify-between">
       <!-- Logo -->
       <router-link to="/" class="flex items-center gap-3 group">
-        <div class="h-48 w-auto transition-transform group-hover:scale-105">
+        <div class="h-20 w-auto transition-transform group-hover:scale-105">
           <img src="/logo.png" alt="AbeWeb" class="h-full w-auto object-contain" />
         </div>
       </router-link>
