@@ -14,6 +14,16 @@ const router = createRouter({
             path: '/service/:id',
             name: 'service-detail',
             component: ServiceDetailView
+        },
+        {
+            path: '/mentions-legales',
+            name: 'mentions-legales',
+            component: () => import('../views/MentionsLegalesView.vue')
+        },
+        {
+            path: '/politique-de-confidentialite',
+            name: 'politique-de-confidentialite',
+            component: () => import('../views/PolitiqueConfidentialiteView.vue')
         }
     ],
     scrollBehavior(to, from, savedPosition) {

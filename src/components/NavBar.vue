@@ -21,12 +21,12 @@ const toggleMenu = () => {
 <template>
   <nav 
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-    :class="[y > 50 ? 'glass py-4' : 'bg-transparent py-6']"
+    :class="[y > 50 ? 'glass py-2 md:py-4' : 'bg-transparent py-3 md:py-6']"
   >
     <div class="container mx-auto px-6 flex items-center justify-between">
       <!-- Logo -->
       <router-link to="/" class="flex items-center gap-3 group">
-        <div class="h-20 w-auto transition-transform group-hover:scale-105">
+        <div class="h-16 md:h-32 w-auto transition-transform group-hover:scale-105">
           <img src="/logo.png" alt="AbeWeb" class="h-full w-auto object-contain" />
         </div>
       </router-link>

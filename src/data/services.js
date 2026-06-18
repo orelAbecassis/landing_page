@@ -62,11 +62,11 @@ export const services = [
     },
     {
         id: 'cartes-digitales',
-        title: 'Carte Digitale',
+        title: "Carte d'Événement",
         subtitle: 'INNOVATION',
         quote: 'Bien plus qu\'une simple carte',
-        description: 'Création de cartes de visite ou d’invitations digitales pour une communication moderne et élégante.',
-        fullDescription: 'Offrez une expérience unique avec des cartes digitales pour vos événements : mariages, anniversaires, invitations professionnelles ou privées. Interactives et personnalisées, elles permettent de partager toutes les informations essentielles (date, lieu, programme, contact) de manière simple et intuitive.',
+        description: 'Création de cartes de visite ou d’invitations d’événement pour une communication moderne et élégante.',
+        fullDescription: 'Offrez une expérience unique avec des cartes d’événement pour vos moments précieux : mariages, anniversaires, invitations professionnelles ou privées. Interactives et personnalisées, elles permettent de partager toutes les informations essentielles (date, lieu, programme, contact) de manière simple et intuitive.',
         hero: {
             subtitle: 'Cartes de Visite & Invitations',
             title: 'Une carte unique pour tous vos moments.',
@@ -81,13 +81,14 @@ export const services = [
         detailedFeatures: [
             'Design sur mesure selon votre événement',
             'Accès via lien ou QR Code',
+            'Option Plan de Table interactif pour tout gérer',
             'Informations modifiables à tout moment',
             'Compatible mobile, tablette et ordinateur',
         ],
         surMesure: {
             title: 'Une infinité de possibilités',
             description: 'Adaptez votre communication à chaque occasion.',
-            details: 'Que ce soit pour networker efficacement ou pour inviter vos proches à un événement, la carte digitale s\'adapte à vos besoins. Partage illimité, design sur-mesure et effet "wow" garanti.',
+            details: 'Que ce soit pour networker efficacement ou pour inviter vos proches à un événement, la carte d\'événement s\'adapte à vos besoins. Elle inclut également une option "Plan de Table" dynamique pour simplifier le placement et la gestion globale de vos convives. Partage illimité, design sur-mesure et effet "wow" garanti.',
             icon: QrCode
         }
     },

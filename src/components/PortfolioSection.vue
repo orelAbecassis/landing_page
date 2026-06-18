@@ -55,7 +55,7 @@ onMounted(() => {
         <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-primary-500"></div>
       </div>
 
-      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         <a 
           v-for="(project, index) in projects" 
           :key="index"
@@ -71,7 +71,7 @@ onMounted(() => {
             :visible="{ opacity: 1, y: 0, transition: { delay: index * 100 } }"
           >
             <!-- Image Section -->
-            <div class="relative h-48 overflow-hidden">
+            <div class="relative h-40 sm:h-48 overflow-hidden">
               <img 
                 :src="project.image" 
                 :alt="project.title"
@@ -86,9 +86,9 @@ onMounted(() => {
             </div>
             
             <!-- Content Section -->
-            <div class="p-6 flex flex-col flex-grow border-t border-white/5 bg-dark-800">
-              <span class="text-primary-400 text-xs font-bold tracking-wider uppercase mb-2">{{ project.category }}</span>
-              <h3 class="text-xl font-bold text-white mb-4 leading-tight group-hover:text-primary-400 transition-colors">{{ project.title }}</h3>
+            <div class="p-4 sm:p-6 flex flex-col flex-grow border-t border-white/5 bg-dark-800">
+              <span class="text-primary-400 text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-2">{{ project.category }}</span>
+              <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4 leading-tight group-hover:text-primary-400 transition-colors">{{ project.title }}</h3>
               
               <!-- Tags -->
               <div class="mt-auto flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -16,17 +16,18 @@ import orelImage from '../assets/orel_about.png'
             À propos
           </span>
           
-          <h2 class="text-4xl md:text-5xl font-bold text-white">
-            Orel Abecassis <span class="text-gray-500">|</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">Développeur & Chef de Projet</span>
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">
+              Développeur & <span class="whitespace-nowrap">Chef de Projet</span>
+            </span>
           </h2>
 
           <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
             <p>
-              Cheffe de projet et développeuse web, passionnée par l’innovation digitale et les nouvelles technologies. Titulaire d’un Bac+5 en informatique, spécialisé en développement web et en gestion de projet, je poursuis actuellement un double master en entrepreneuriat afin de renforcer mes compétences en management, en stratégie et en leadership.
+              Titulaire d’un Bac+5 en informatique et actuellement en double master entrepreneuriat, je combine expertise technique et vision stratégique.
             </p>
             <p>
-              Animée par le DevOps, la gestion de projet et le développement web, j’ai choisi de me lancer en freelance pour mettre mon expertise au service de projets innovants. 
-              <br>Mon quotidien : créer, automatiser, optimiser et piloter des solutions digitales modernes.
+              Passionnée par l'innovation digitale, le DevOps et la gestion de projet, je mets mes compétences au service de vos projets pour créer, automatiser et piloter des solutions web modernes et optimisées.
             </p>
           </div>
         </div>

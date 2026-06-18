@@ -33,7 +33,7 @@ const currentYear = new Date().getFullYear()
       <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
         <!-- Logo -->
         <div class="flex items-center gap-3">
-          <div class="h-12 w-auto">
+          <div class="h-24 w-auto">
             <img src="/logo.png" alt="AbeWeb" class="h-full w-auto object-contain" />
           </div>
         </div>
@@ -55,8 +55,8 @@ const currentYear = new Date().getFullYear()
       <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
         <p>&copy; {{ currentYear }} Orel Abecassis. Tous droits réservés.</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-primary-400 transition-colors">Mentions Légales</a>
-          <a href="#" class="hover:text-primary-400 transition-colors">Politique de Confidentialité</a>
+          <router-link to="/mentions-legales" class="hover:text-primary-400 transition-colors">Mentions Légales</router-link>
+          <router-link to="/politique-de-confidentialite" class="hover:text-primary-400 transition-colors">Politique de Confidentialité</router-link>
         </div>
       </div>
     </div>

@@ -54,28 +54,6 @@ const handleSubmit = async () => {
             Vous avez une idée ? Un projet ambitieux ? Discutons-en autour d'un café virtuel.
             Je suis toujours à la recherche de nouveaux défis.
           </p>
-
-          <div class="space-y-8">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-primary-500/10 flex items-center justify-center shrink-0">
-                <Mail class="w-6 h-6 text-primary-500" />
-              </div>
-              <div>
-                <h3 class="text-white font-bold mb-1">Email</h3>
-                <a href="mailto:orel.abecassis.pro@gmail.com" class="text-gray-400 hover:text-primary-400 transition-colors">orel.abecassis.pro@gmail.com</a>
-              </div>
-            </div>
-            
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-primary-500/10 flex items-center justify-center shrink-0">
-                <MapPin class="w-6 h-6 text-primary-500" />
-              </div>
-              <div>
-                <h3 class="text-white font-bold mb-1">Localisation</h3>
-                <p class="text-gray-400">Créteil, France</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Contact Form -->
