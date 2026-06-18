@@ -132,12 +132,12 @@ const goBack = () => {
         <!-- CTA Section -->
         <div class="text-center py-12" v-motion :initial="{ opacity: 0, scale: 0.9 }" :enter="{ opacity: 1, scale: 1, transition: { delay: 600 } }">
           <h3 class="text-3xl md:text-4xl font-bold text-white mb-8">Prêt à aller plus loin ?</h3>
-          <a 
-            href="#contact" 
+          <router-link 
+            to="/#contact" 
             class="inline-block px-10 py-5 bg-primary-600 hover:bg-primary-500 text-white font-bold text-lg rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-primary-600/20"
           >
             Demander un devis
-          </a>
+          </router-link>
         </div>
       </div>
 
@@ -184,13 +184,13 @@ const goBack = () => {
 
         <!-- CTA -->
         <div class="text-center" v-motion :initial="{ opacity: 0, scale: 0.9 }" :enter="{ opacity: 1, scale: 1, transition: { delay: 600 } }">
-          <a 
-            href="#contact" 
+          <router-link 
+            to="/#contact" 
             class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-bold transition-all hover:scale-105 shadow-lg shadow-primary-600/20"
           >
             Demander un devis
             <span class="text-xl">→</span>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
