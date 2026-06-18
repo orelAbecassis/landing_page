@@ -19,6 +19,6 @@ jobs:
       - name: Install dependencies and build
         run: npm ci && npm run build
       - name: Deploy to Firebase Hosting
-        run: npx firebase deploy --only hosting
+        run: npx firebase deploy --only hosting --project landing-page-orelabk6
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
