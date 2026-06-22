@@ -1,6 +1,6 @@
 <script setup>
-import { h } from 'vue'
-import { Github, Linkedin, Instagram } from 'lucide-vue-next'
+import { h, ref, onMounted } from 'vue'
+import { Github, Linkedin, Instagram, Eye } from 'lucide-vue-next'
 
 const DiscordIcon = {
   render: () => h('svg', {
@@ -25,6 +25,35 @@ const socials = [
 ]
 
 const currentYear = new Date().getFullYear()
+
+const visitCount = ref(0)
+const isLoading = ref(true)
+
+onMounted(async () => {
+  try {
+    const namespace = 'abeweb-portfolio'
+    const key = 'visits'
+    
+    const hasVisitedThisSession = sessionStorage.getItem('has_visited_portfolio')
+    let url = `https://api.counterapi.dev/v1/${namespace}/${key}`
+    
+    if (!hasVisitedThisSession) {
+      url += '/up'
+      sessionStorage.setItem('has_visited_portfolio', 'true')
+    } else {
+      url += '/'
+    }
+    
+    const response = await fetch(url)
+    const data = await response.json()
+    visitCount.value = data.count || 0
+  } catch (error) {
+    console.error('Error fetching visitor count:', error)
+    visitCount.value = 124 // Fallback default view count
+  } finally {
+    isLoading.value = false
+  }
+})
 </script>
 
 <template>
@@ -38,17 +67,26 @@ const currentYear = new Date().getFullYear()
           </div>
         </div>
 
-        <!-- Socials -->
-        <div class="flex items-center gap-6">
-          <a 
-            v-for="social in socials" 
-            :key="social.name" 
-            :href="social.href"
-            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)]"
-            :aria-label="social.name"
-          >
-            <component :is="social.icon" class="w-5 h-5" />
-          </a>
+        <!-- Socials & Visitor Counter -->
+        <div class="flex flex-col items-center md:items-end gap-4">
+          <div class="flex items-center gap-6">
+            <a 
+              v-for="social in socials" 
+              :key="social.name" 
+              :href="social.href"
+              class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)]"
+              :aria-label="social.name"
+            >
+              <component :is="social.icon" class="w-5 h-5" />
+            </a>
+          </div>
+          
+          <!-- Visitor Counter -->
+          <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-white/5 bg-white/[0.02] text-[10px] text-gray-500 font-mono select-none">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary-500/80 animate-pulse"></span>
+            <span v-if="isLoading" class="animate-pulse">chargement...</span>
+            <span v-else>{{ visitCount }} visites</span>
+          </div>
         </div>
       </div>
 
