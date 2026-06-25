@@ -1,9 +1,21 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { ExternalLink, ArrowRight } from 'lucide-vue-next'
+import { ExternalLink, Eye, ArrowRight } from 'lucide-vue-next'
+import ProjectDetailModal from './ProjectDetailModal.vue'
 
 const projects = ref([])
 const isLoading = ref(true)
+const selectedProject = ref(null)
+const isProjectModalOpen = ref(false)
+
+const openProjectModal = (project) => {
+  selectedProject.value = project
+  isProjectModalOpen.value = true
+}
+
+const closeProjectModal = () => {
+  isProjectModalOpen.value = false
+}
 
 const fetchProjects = async () => {
   try {
@@ -16,8 +28,10 @@ const fetchProjects = async () => {
       title: item.name,
       category: item.property_tags && item.property_tags.length > 0 ? item.property_tags[0] : 'Projet',
       image: item.property_page && item.property_page.length > 0 ? item.property_page[0] : '/placeholder.jpg',
+      images: item.property_page || [],
       tags: item.property_techno || [],
-      link: item.property_url
+      link: item.property_url,
+      description: item.property_description || "Pas de description disponible."
     }))
   } catch (error) {
     console.error('Error fetching projects:', error)
@@ -56,13 +70,15 @@ onMounted(() => {
       </div>
 
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a 
+        <component 
           v-for="(project, index) in projects" 
           :key="index"
-          :href="project.link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group relative block rounded-xl overflow-hidden bg-dark-800 border border-white/5 shadow-lg hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1"
+          :is="project.link ? 'a' : 'div'"
+          :href="project.link || undefined"
+          :target="project.link ? '_blank' : undefined"
+          :rel="project.link ? 'noopener noreferrer' : undefined"
+          @click="!project.link ? openProjectModal(project) : null"
+          class="group relative block rounded-xl overflow-hidden bg-dark-800 border border-white/5 shadow-lg hover:shadow-primary-500/10 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
         >
           <div 
             class="flex flex-col h-full"
@@ -80,7 +96,8 @@ onMounted(() => {
               <!-- Overlay with Button -->
               <div class="absolute inset-0 bg-dark-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
                 <div class="h-12 w-12 rounded-full bg-primary-600 flex items-center justify-center text-white shadow-lg transform scale-50 group-hover:scale-100 transition-all duration-300">
-                  <ExternalLink class="w-6 h-6" />
+                  <ExternalLink v-if="project.link" class="w-6 h-6" />
+                  <Eye v-else class="w-6 h-6" />
                 </div>
               </div>
             </div>
@@ -102,7 +119,7 @@ onMounted(() => {
               </div>
             </div>
           </div>
-        </a>
+        </component>
       </div>
       
       <div class="mt-10 text-center md:hidden">
@@ -112,5 +129,12 @@ onMounted(() => {
         </a>
       </div>
     </div>
+
+    <!-- Project Detail Modal -->
+    <ProjectDetailModal 
+      :is-open="isProjectModalOpen" 
+      :project="selectedProject" 
+      @close="closeProjectModal" 
+    />
   </section>
 </template>
